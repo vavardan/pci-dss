@@ -1,7 +1,5 @@
 # **[PCI DSS Guidance for the OCI Operating Entities Landing Zone](#)**
 
-&nbsp;
-
 ### Overview
 
 Oracle Cloud Infrastructure provides third-party compliance attestations for applicable cloud services, including **PCI DSS Attestation of Compliance**, as published through [Oracle Cloud Compliance](https://www.oracle.com/corporate/cloud-compliance/#attestations). These attestations can support customer compliance and reporting activities, subject to the applicable service, region, and attestation scope.
@@ -71,7 +69,7 @@ It does **not** make a customer environment PCI DSS compliant by itself. Complia
 
 &nbsp;
 
-#### License
+## License
 Copyright (c) 2026 Oracle and/or its affiliates.
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.
