@@ -4,13 +4,10 @@
 
 Oracle Cloud Infrastructure provides third-party compliance attestations for applicable cloud services, including **PCI DSS Attestation of Compliance**, as published through [Oracle Cloud Compliance](https://www.oracle.com/corporate/cloud-compliance/#attestations). These attestations can support customer compliance and reporting activities, subject to the applicable service, region, and attestation scope.
 
-**OCI Operating Entities Landing Zone** helps customers build a security-oriented, repeatable OCI baseline for environments that may support PCI DSS workloads. It provides landing zone blueprints and infrastructure-as-code patterns for identity, networking, security services, logging, monitoring, and governance.
+**OCI Operating Entities Landing Zone** helps customers build a secure, repeatable OCI baseline for environments that may support PCI DSS workloads. It provides landing zone blueprints and infrastructure-as-code patterns for identity, networking, security services, logging, monitoring, and governance.
 
-This guidance explains how the Operating Entities Landing Zone can support PCI DSS environment design. It is based on **PCI DSS v4.0.1** and is intended as architectural guidance only.
+This guidance explains how the Operating Entities Landing Zone can support PCI DSS environment design. It does not replace PCI DSS assessment, scope definition, workload security, or validation with a Qualified Security Assessor, acquirer, or applicable payment brand.
 
-It is not a formal PCI DSS control matrix, Report on Compliance, Attestation of Compliance, assessment opinion, or replacement for customer scope definition, workload security, or validation with a Qualified Security Assessor, acquirer, or applicable payment brand.
-
-Future PCI DSS releases may introduce updated requirements, testing procedures, or terminology, so customers should confirm the applicable PCI DSS version for their assessment.
 
 &nbsp;
 
@@ -31,19 +28,17 @@ Future PCI DSS releases may introduce updated requirements, testing procedures, 
 
 ### PCI DSS requirement alignment with OCI Operating Entities Landing Zone capabilities
 
-PCI DSS v4.0.1 consists of the [12 principal security requirements and corresponding testing procedures](https://www.pcisecuritystandards.org/document_library/?category=pcidss).
+The PCI DSS standard consists of the [12 principal, detailed security requirements](https://www.pcisecuritystandards.org/document_library/?category=pcidss), and corresponding testing procedures. The table below maps each requirement (where applicable) to the relevant OCI Operating Entities Landing Zone capabilities that can support PCI DSS implementation, especially in areas such as logical separation, network segmentation, secure configuration, access control, logging, monitoring, vulnerability management, governance, and automation.
 
-The table below maps each requirement, where applicable, to the relevant OCI Operating Entities Landing Zone capabilities that can support PCI DSS implementation, especially in areas such as logical separation, network segmentation, secure configuration, access control, logging, monitoring, vulnerability management, governance, and automation.
-
-Landing Zone capabilities must be configured, operated, and validated in the context of the customer's PCI scope, cardholder data flows, and assessment process.
+Landing Zone capabilities must be configured, operated, and validated in the context of the customer’s PCI scope, cardholder data flows, and assessment process.
 
 
 | PCI DSS requirement | Relevant OCI Operating Entities Landing Zone capabilities |
 | --- | --- |
 | **1. Install and maintain network security controls** | Provides segmented network patterns using Hub & Spoke design, private spoke subnets, route tables, NSGs, security lists, gateways, DRG, and Network Firewall options. |
 | **2. Apply secure configurations to all system components** | Provides standardized OCI baseline patterns, CIS-oriented controls, Security Zones, IAM policies, quotas, and governance guardrails. |
-| **3. Protect stored account data** | Supports compartment separation, IAM controls, OCI Vault, customer-managed keys, and encryption-oriented architecture. Cardholder data storage, tokenization, masking or truncation, key rotation, and data-retention decisions remain customer and workload responsibilities. |
-| **4. Protect cardholder data with strong cryptography during transmission over open, public networks** | Supports private networking, controlled routing, service gateways, and firewall-based traffic control. TLS configuration, certificate lifecycle management, and application or workload encryption remain customer and workload responsibilities. |
+| **3. Protect stored account data** | Supports compartment separation, IAM controls, OCI Vault, customer-managed keys, and encryption-oriented architecture. |
+| **4. Protect cardholder data with strong cryptography during transmission over open, public networks** | Supports private networking, controlled routing, service gateways, and firewall-based traffic control. |
 | **5. Protect all systems and networks from malicious software** | Provides indirect support through OCI Vulnerability Scanning, Cloud Guard, and security monitoring patterns that can help identify vulnerable or risky resources. |
 | **6. Develop and maintain secure systems and software** | Enables reviewable, repeatable, and version-controlled infrastructure deployment through IaC, supporting controlled changes to the OCI baseline. |
 | **7. Restrict access to system components and cardholder data by business need to know** | Uses compartments, IAM groups, policies, dynamic groups, and identity domains to support least privilege and separation of duties. |
@@ -56,36 +51,17 @@ Landing Zone capabilities must be configured, operated, and validated in the con
 
 &nbsp;
 
-### Customer responsibilities
-
-The Operating Entities Landing Zone provides a security-oriented OCI foundation, but customers remain responsible for defining, securing, operating, and validating their complete PCI DSS environment.
-
-Customer and workload responsibilities include:
-
-- Defining the cardholder data environment, PCI DSS scope, connected-to systems, and cardholder data flows.
-- Deciding where cardholder data is stored, processed, or transmitted, including tokenization, masking, truncation, and data-retention requirements.
-- Configuring and operating workload-level encryption, TLS settings, certificate lifecycle management, key rotation, and application security controls.
-- Maintaining secure operating procedures, vulnerability remediation, change control, incident response, user access reviews, and evidence collection.
-- Validating the environment with the appropriate assessor, acquirer, payment brand, or internal compliance process.
-
-
-&nbsp;
-
 ### Compliance boundary
 
 The OCI Operating Entities Landing Zone is a **PCI DSS-enabling architecture baseline**. It helps customers deploy OCI environments with security, segmentation, monitoring, and governance controls that can support PCI DSS objectives.
 
-It does **not** make a customer environment PCI DSS compliant by itself. Compliance depends on the customer's complete cardholder data environment, the OCI services used, workload configuration, data flows, operating procedures, testing results, evidence, and formal validation process.
-
-Cloud compliance follows a shared responsibility model. Oracle states that cloud security, privacy, and compliance responsibilities are shared between Oracle and the customer depending on the cloud service model, and recommends that customers formally determine whether the applicable Oracle cloud services are suitable for their own legal and regulatory compliance obligations. That determination remains the customer's responsibility.
-
+It does **not** make a customer environment PCI DSS compliant by itself. Compliance depends on the customer’s complete cardholder data environment, the OCI services used, workload configuration, data flows, operating procedures, testing results, evidence, and formal validation process.
 
 &nbsp;
 
 ### References
 
 - [Oracle Cloud Compliance Attestations](https://www.oracle.com/corporate/cloud-compliance/#attestations)
-- [Oracle Cloud Compliance Shared Management Model](https://www.oracle.com/corporate/cloud-compliance/)
 - [PCI Security Standards Council: PCI DSS](https://www.pcisecuritystandards.org/standards/pci-dss/)
 - [PCI Security Standards Council: Document Library](https://www.pcisecuritystandards.org/document_library/)
 - [OCI Operating Entities Landing Zone](https://github.com/oci-landing-zones/oci-landing-zone-operating-entities)
