@@ -17,10 +17,10 @@ For additional information, see: [Stateful compared to Stateless rules](https://
 
 | Legend           | Description                                                                                                       |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| <img src="./sl.png"  height="120" align="center"> | **Security List (SL)** with **Ingress** and **Egress** rules. </br>The diagram uses the exact SL naming convention defined in the JSON configuration templates. |
-| <img src="./nsg.png"  height="120" align="center"> | **Network Security Group (NSG)** with **Ingress** and **Egress** rules.  </br>The diagram uses the exact SL naming convention defined in the JSON configuration templates. |
-| <img src="./stateful.png"  height="27" align="center">| **Stateful** security rules. </br>These can be defined in either a Security List or a Network Security Group. |
-| <img src="./stateless.png"  height="27" align="center"> | **Stateless** security rules. </br>These can be defined in either a Security List or a Network Security Group. |
+| <img src="./sl.png"  height="100" align="center"> | **Security List (SL)** with **Ingress** and **Egress** rules. </br>The diagram uses the exact SL naming convention defined in the JSON configuration templates. |
+| <img src="./nsg.png"  height="100" align="center"> | **Network Security Group (NSG)** with **Ingress** and **Egress** rules.  </br>The diagram uses the exact SL naming convention defined in the JSON configuration templates. |
+| <img src="./stateful.png"  height="23" align="center">| **Stateful** security rules. </br>These can be defined in either a Security List or a Network Security Group. |
+| <img src="./stateless.png"  height="23" align="center"> | **Stateless** security rules. </br>These can be defined in either a Security List or a Network Security Group. |
 
 
 &nbsp;
