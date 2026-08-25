@@ -33,7 +33,7 @@ For additional information, see: [Stateful compared to Stateless rules](https://
 
 - If both [stateful and stateless rules](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securityrules.htm#stateful) are configured and traffic matches both rule types in the same direction, the stateless rule takes precedence and the connection is not tracked. In this case, a corresponding rule in the opposite direction is required to allow the return traffic.
 
-- For stateless rules, make sure to configure the corresponding rules for return traffic using the required ephemeral port range (1024-65535). 
+- For stateless rules, make sure to configure the corresponding rules for return traffic using the required ephemeral port range. 
   </br>For example: `Ingress | Source: 10.0.64.0/21 | Protocol: TCP | Source port: 80 | Destination port: 1024-65535` </br>this allows the return flow for a health check initiated by the Load Balancer and returned from the prod backend servers.
 
 - The JSON templates do not include dedicated NSG configurations for the **mgmt**, **mon**, and **dns** subnets within the Hub VCN. These NSGs should be defined and applied as needed based on the specific connectivity, security, and workload requirements.
